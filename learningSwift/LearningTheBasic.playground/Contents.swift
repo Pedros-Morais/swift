@@ -1,5 +1,13 @@
 import UIKit
 
-var greeting = "Hello, playground"
+var text = "Pedro Henrique"
+var intNumber = 10
+var parceNumber = 1.2
+var floatNumber: Double = 4.5
+var secondFloatNumber: Float = 4.3
 
-print(greeting)
+var boolean = true
+boolean = false
+
+let bool = true
+
