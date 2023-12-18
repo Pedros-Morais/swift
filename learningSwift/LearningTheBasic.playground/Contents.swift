@@ -69,3 +69,34 @@ func add(numberOne: Int, numberTwo:Int) -> Int{
 let result = add(numberOne: 2, numberTwo: 3)
 
 print("O resultado é \(result)")
+
+var isChecked = true
+
+if isChecked == true{
+    print("checked")
+}else{
+    print("no")
+}
+
+
+var nota = 18
+
+if nota < 10{
+    print("reprovado")
+}else if nota == 10{
+    print("aprovado")
+} else if nota < 15{
+    print("aprovado com nota boa")
+}else{
+    print("aprovado com boa nota")
+}
+
+
+let code = 4
+switch code{
+case 1...10:print("1 a 10")
+case 20...30:print("20 a 30")
+case 30...40:print("30 a 40")
+case 40...50:print("40 a 50")
+default:print("sei la")
+}
