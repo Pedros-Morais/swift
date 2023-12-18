@@ -100,3 +100,22 @@ case 30...40:print("30 a 40")
 case 40...50:print("40 a 50")
 default:print("sei la")
 }
+
+
+
+var names = ["Pedro", "Gustavo", "Larissa", "Camila"]
+
+for nome in names where nome == "Larissa" {
+    print(nome)
+}
+var randomNumbers: [Int] = []
+for i in 0...10{
+    print(i)
+}
+for i in 0...10{
+    let newNumber = Int.random(in: 0...1000)
+    randomNumbers.append(newNumber)
+}
+for i in randomNumbers{
+    print(i)
+}
