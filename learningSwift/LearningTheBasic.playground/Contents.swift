@@ -38,3 +38,5 @@ print(ages)
 var numbers = [1,2,2,3,4,5,5,6,6]
 
 var setNumbers =  Set(numbers)
+print(setNumbers.contains(2))
+print(setNumbers.contains(22))
