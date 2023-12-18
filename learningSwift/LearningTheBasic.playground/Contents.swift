@@ -11,3 +11,6 @@ boolean = false
 
 let bool = true
 
+var vazio: [Int] = []
+
+var ages = [12,23,32,43,54]
