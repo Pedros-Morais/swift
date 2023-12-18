@@ -45,3 +45,27 @@ var peoples: [String:Int] = ["Pedro":18, "Bianca":19, "Rafaella":21]
 peoples["Romulo"] = 18
 print(peoples["Romulo"]!)
 print(peoples)
+
+
+func sayHello(){
+    print("Hello World")
+}
+sayHello()
+func sayTheName(name: String){
+    print("Ola \(name)")
+}
+
+sayTheName(name: "Pedro Morais")
+
+func add(numberOne: Int, numberTwo:Int) -> Int{
+    return numberOne + numberTwo
+}
+
+
+//add(numberOne: 3, numberTwo: 5)
+//
+//let result: () = add(numberOne: 3, numberTwo: 5)
+
+let result = add(numberOne: 2, numberTwo: 3)
+
+print("O resultado é \(result)")
