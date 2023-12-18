@@ -28,4 +28,6 @@ ages[1]
 ages.append(10)
 ages.insert(12, at: 3)
 print(ages)
+ages.sort()
+print(ages)
 
