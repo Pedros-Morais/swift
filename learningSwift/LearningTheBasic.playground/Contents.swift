@@ -41,4 +41,7 @@ var setNumbers =  Set(numbers)
 print(setNumbers.contains(2))
 print(setNumbers.contains(22))
 
-let peoples: [String:Int] = ["Pedro":18, "Bianca":19, "Rafaella":21]
+var peoples: [String:Int] = ["Pedro":18, "Bianca":19, "Rafaella":21]
+peoples["Romulo"] = 18
+print(peoples["Romulo"]!)
+print(peoples)
