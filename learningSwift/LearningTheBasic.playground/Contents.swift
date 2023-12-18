@@ -139,3 +139,21 @@ func getCourseDuration(de course:Course){
 }
 
 getCourseDuration(de: .WebDeveloper)
+
+var arrayOfAges:[Int] = [10]
+arrayOfAges.sort()
+
+if let maisVelho = arrayOfAges.last {
+    print("O mais velho é \(maisVelho)")
+}else{
+    print("nao foram definida idades")
+}
+let maisVelho2 = arrayOfAges.last ?? 999
+
+func getOlder(){
+    guard let maisVelho3 = arrayOfAges.last else {return}
+    print("O mais velhoo é \(maisVelho3)")
+
+}
+let maisVelho4 = arrayOfAges.last!
+getOlder()
