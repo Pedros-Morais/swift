@@ -30,4 +30,7 @@ ages.insert(12, at: 3)
 print(ages)
 ages.sort()
 print(ages)
-
+ages.reverse()
+print(ages)
+ages.shuffle()
+print(ages)
