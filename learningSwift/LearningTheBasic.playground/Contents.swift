@@ -40,3 +40,5 @@ var numbers = [1,2,2,3,4,5,5,6,6]
 var setNumbers =  Set(numbers)
 print(setNumbers.contains(2))
 print(setNumbers.contains(22))
+
+let peoples: [String:Int] = ["Pedro":18, "Bianca":19, "Rafaella":21]
