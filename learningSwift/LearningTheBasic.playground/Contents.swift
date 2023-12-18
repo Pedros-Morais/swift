@@ -119,3 +119,23 @@ for i in 0...10{
 for i in randomNumbers{
     print(i)
 }
+enum Course{
+    case WebDeveloper
+    case MobileDeveloper
+    case LowCodeDeveloper
+}
+
+func getCourseDuration(de course:Course){
+    if course == .WebDeveloper{
+        print(2000)
+    } else if course == .MobileDeveloper{
+        print(3000)
+    } else if course == .LowCodeDeveloper{
+        print(100)
+    }else{
+        print(0)
+    }
+    
+}
+
+getCourseDuration(de: .WebDeveloper)
