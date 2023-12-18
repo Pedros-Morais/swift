@@ -17,3 +17,8 @@ var ages = [12,23,32,43,54]
 
 vazio.count
 ages.count
+
+vazio.first
+ages.first
+ages.last
+vazio.last
