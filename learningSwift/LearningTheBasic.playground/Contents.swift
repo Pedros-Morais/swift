@@ -157,3 +157,15 @@ func getOlder(){
 }
 let maisVelho4 = arrayOfAges.last!
 getOlder()
+
+class Peoples{
+    var name:String
+    var email:String
+    var age: Int
+    init(name: String, email: String, age: Int) {
+        self.name = name
+        self.email = email
+        self.age = age
+    }
+}
+let p1 = Peoples(name: "pedro", email: "pedro@email.com", age: 18)
