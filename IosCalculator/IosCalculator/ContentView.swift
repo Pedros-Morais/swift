@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var result = "0"
     var body: some View {
-        VStack(spacing:0) {
+        VStack(alignment: .trailing, spacing:0 ) {
+            HStack{
+                Text(result)
+                    .padding()
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                
+            }
             HStack{
                 Button("7"){}
                     .padding()
@@ -81,7 +89,7 @@ struct ContentView: View {
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                         .background(.orange)
                 }.foregroundColor(.white)
-            }
+            }.frame(maxHeight: 52)
         }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).background(Color.black)
             .padding()
         
