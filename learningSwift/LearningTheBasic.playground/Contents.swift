@@ -159,13 +159,30 @@ let maisVelho4 = arrayOfAges.last!
 getOlder()
 
 class Peoples{
-    var name:String
-    var email:String
-    var age: Int
+    var name:String?
+    var email:String?
+    var age: Int?
+    init(){}
     init(name: String, email: String, age: Int) {
         self.name = name
         self.email = email
         self.age = age
     }
+    func writeName(){
+        if let name = self.name{
+            print(name)
+        }
+    }
 }
 let p1 = Peoples(name: "pedro", email: "pedro@email.com", age: 18)
+let p2 = Peoples()
+p1.name = "Marcos"
+print(p1.name!)
+
+p1.writeName()
+class Student: Peoples{
+    var number: Int?
+    override func writeName() {
+        print("\(name) - \(number)")
+    }
+}
