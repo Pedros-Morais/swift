@@ -186,3 +186,8 @@ class Student: Peoples{
         print("\(name) - \(number)")
     }
 }
+
+func plus(a:Numeric, b:Numeric){
+    return a + b
+    
+}
