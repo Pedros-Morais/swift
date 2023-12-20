@@ -187,7 +187,7 @@ class Student: Peoples{
     }
 }
 
-func plus(a:Numeric, b:Numeric){
+func plus<T: Numeric>(_ a: T, _ b: T) -> T {
     return a + b
-    
 }
+
