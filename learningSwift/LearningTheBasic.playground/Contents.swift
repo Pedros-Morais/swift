@@ -191,3 +191,15 @@ func plus<T: Numeric>(_ a: T, _ b: T) -> T {
     return a + b
 }
 
+func minus<T: Numeric>(_ a: T, _ b: T) -> T {
+    return a - b
+}
+
+func multi<T: Numeric>(_ a: T, _ b: T) -> T {
+    return a * b
+}
+
+
+
+
+
