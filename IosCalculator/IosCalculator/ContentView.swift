@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var result = "0"
     var body: some View {
         VStack(alignment: .trailing, spacing:0 ) {
+            Spacer()
             HStack{
                 Text(result)
                     .padding()
@@ -32,7 +33,7 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity)
                     
                 Button("X"){}
-                    .padding()
+                    .padding(.vertical, 40)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .background(.orange)
                   
@@ -51,7 +52,7 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity)
                     
                 Button("-"){}
-                    .padding()
+                    .padding(.vertical, 40)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .background(.orange)
                   
@@ -71,7 +72,8 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity)
                     
                 Button("+"){}
-                    .padding()
+                    .padding(.vertical, 40)
+
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .background(.orange)
                   
@@ -89,8 +91,8 @@ struct ContentView: View {
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                         .background(.orange)
                 }.foregroundColor(.white)
-            }.frame(maxHeight: 52)
-        }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).background(Color.black)
+            }.frame(maxHeight: 92)
+        }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity).background(Color.black)
             .padding()
         
        
