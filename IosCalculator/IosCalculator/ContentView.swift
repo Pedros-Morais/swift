@@ -8,23 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var result = "0"
+    @State var result = 0
     var body: some View {
         VStack(alignment: .trailing, spacing:0 ) {
-            Text("\(result.count)").foregroundColor(.red)
+            Text("\(String(result).count)").foregroundColor(.red)
             Spacer()
             HStack{
-                Text(result)
+                Text(String(result))
                     .padding()
                     .lineLimit(1)
                     .frame(maxWidth:.infinity)
-                    .font(.system(size: CGFloat(80 / Int((Double(result.count + 10) / 10.0)))))
+                    .font(.system(size: CGFloat(80 / Int((Double(String(result).count + 10) / 8.0)))))
                     .foregroundColor(.white)
                     .fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical:false)
                 
             }
             HStack{
-                Button("A/C"){}
+                Button("A/C"){
+                    result = 0
+                }
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                    
@@ -83,13 +85,13 @@ struct ContentView: View {
      
             HStack{
                 Button("1"){
-                    result += "1"
+                    result = (result * 10) + 1
                 }
                     .padding()
                     .frame(maxWidth: .infinity)
                    
                 Button("2"){
-                    result += "2"
+                    result = (result * 10) + 2
                 }
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
