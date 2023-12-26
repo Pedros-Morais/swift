@@ -85,7 +85,7 @@ struct ContentView: View {
                         .padding()
                         .frame(maxWidth: .infinity)
                     Button("="){}
-                        .padding()
+                        .padding(.vertical, 40)
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                         .background(.orange)
                 }.foregroundColor(.white)
