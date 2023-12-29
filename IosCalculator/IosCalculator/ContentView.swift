@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State var result = 0
+    
+    func process(digit: Int){
+        result = (result * 10) + digit
+    }
+    
     var body: some View {
         VStack(alignment: .trailing, spacing:0 ) {
             Text("\(String(result).count)").foregroundColor(.red)
@@ -85,13 +90,14 @@ struct ContentView: View {
      
             HStack{
                 Button("1"){
-                    result = (result * 10) + 1
+                    process(digit: 1)
+                   
                 }
                     .padding()
                     .frame(maxWidth: .infinity)
                    
                 Button("2"){
-                    result = (result * 10) + 2
+                    process(digit: 2)
                 }
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
