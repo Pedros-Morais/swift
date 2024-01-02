@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State var result = 0
-    
+    @State var operation = 0
     func process(digit: Int){
         result = (result * 10) + digit
     }
+    
     
     var body: some View {
         VStack(alignment: .trailing, spacing:0 ) {
@@ -106,7 +107,9 @@ struct ContentView: View {
                     .padding()
                     .frame(maxWidth: .infinity)
                     
-                Button("+"){}
+                Button("+"){
+                    operation = 1
+                }
                     .padding(.vertical, 40)
 
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
