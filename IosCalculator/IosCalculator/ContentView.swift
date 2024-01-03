@@ -138,7 +138,11 @@ struct ContentView: View {
                     Button(","){}
                         .padding()
                         .frame(maxWidth: .infinity)
-                    Button("="){}
+                    Button("="){
+                        calculate()
+                        previousOperation = 999
+                        operation = 999
+                    }
                         .padding(.vertical, 40)
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                         .background(.orange)
