@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var previous = 0
     @State var result = 0
     @State var operation = 0
     @State var previousOperation = 0
@@ -19,7 +20,13 @@ struct ContentView: View {
         }
         result = (result * 10) + digit
     }
-    
+    func calculate(){
+        if previousOperation == 1 {
+           result = previous + result
+            previousOperation = 0
+        }
+        previous = result
+    }
     
     var body: some View {
         VStack(alignment: .trailing, spacing:0 ) {
@@ -114,6 +121,7 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity)
                     
                 Button("+"){
+                    calculate()
                     operation = 1
                 }
                     .padding(.vertical, 40)
