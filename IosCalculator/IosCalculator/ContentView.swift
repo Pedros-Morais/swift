@@ -14,6 +14,8 @@ struct ContentView: View {
     func process(digit: Int){
         if operation > 0 {
             result = 0
+            previousOperation = operation
+            operation = -1
         }
         result = (result * 10) + digit
     }
