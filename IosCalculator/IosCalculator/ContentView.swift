@@ -10,7 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @State var result = 0
     @State var operation = 0
+    @State var previousOperation = 0
     func process(digit: Int){
+        if operation > 0 {
+            result = 0
+        }
         result = (result * 10) + digit
     }
     
