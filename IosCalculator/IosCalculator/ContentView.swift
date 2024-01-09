@@ -58,45 +58,66 @@ struct ContentView: View {
                     .padding()
                     .frame(maxWidth: .infinity)
                     
-                Button("/"){}
+                Button("/"){
+                    calculate()
+                    operation = 4
+                }
                     .padding(.vertical, 40)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .background(.orange)
                   
             }.foregroundColor(.white)
             HStack{
-                Button("7"){}
+                Button("7"){
+                    process(digit: 7)
+                }
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                    
-                Button("8"){}
+                Button("8"){
+                    process(digit: 8)
+                }
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                    
-                Button("9"){}
+                Button("9"){
+                    process(digit: 9)
+                }
                     .padding()
                     .frame(maxWidth: .infinity)
                     
-                Button("X"){}
+                Button("X"){
+                    calculate()
+                    operation = 3
+                }
                     .padding(.vertical, 40)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .background(.orange)
                   
             }.foregroundColor(.white)
             HStack{
-                Button("4"){}
+                Button("4"){
+                    process(digit: 4)
+                }
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                    
-                Button("5"){}
+                Button("5"){
+                    process(digit: 5)
+                }
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                    
-                Button("6"){}
+                Button("6"){
+                    process(digit: 6)
+                }
                     .padding()
                     .frame(maxWidth: .infinity)
                     
-                Button("-"){}
+                Button("-"){
+                    calculate()
+                    operation = 2
+                }
                     .padding(.vertical, 40)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     .background(.orange)
