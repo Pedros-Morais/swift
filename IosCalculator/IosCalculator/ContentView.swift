@@ -28,6 +28,7 @@ struct ContentView: View {
         previous = result
     }
     
+    
     var body: some View {
         VStack(alignment: .trailing, spacing:0 ) {
             Text("\(String(result).count)").foregroundColor(.red)
@@ -132,7 +133,9 @@ struct ContentView: View {
             }.foregroundColor(.white)
             GeometryReader { geometry in
                 HStack{
-                    Button("0"){}
+                    Button("0"){
+                        process(digit: 0)
+                    }
                         .padding()
                         .frame(minWidth: geometry.size.width / 2)
                     Button(","){}
