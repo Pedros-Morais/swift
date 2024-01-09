@@ -22,12 +22,29 @@ struct ContentView: View {
     }
     func calculate(){
         if previousOperation == 1 {
-           result = previous + result
+            result = previous + result
+            previousOperation = 0
+        } else if previousOperation == 2 {
+            result = previous - result
+            previousOperation = 0
+        }
+        else if previousOperation == 3 {
+            result = previous * result
+            previousOperation = 0
+        }
+        else if previousOperation == 4 {
+            result = previous / result
             previousOperation = 0
         }
         previous = result
     }
-    
+    func reset(){
+        previous = 0
+        previousOperation = 0
+        result = 0
+        operation = 0
+        
+    }
     
     var body: some View {
         VStack(alignment: .trailing, spacing:0 ) {
@@ -45,7 +62,7 @@ struct ContentView: View {
             }
             HStack{
                 Button("A/C"){
-                    result = 0
+                   reset()
                 }
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
