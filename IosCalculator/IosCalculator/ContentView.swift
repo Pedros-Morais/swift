@@ -117,7 +117,9 @@ struct ContentView: View {
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                    
-                Button("3"){}
+                Button("3"){
+                    process(digit: 3)
+                }
                     .padding()
                     .frame(maxWidth: .infinity)
                     
