@@ -12,6 +12,15 @@ struct ContentView: View {
     @State var result = 0.0
     @State var operation = 0.0
     @State var previousOperation = 0.0
+    
+    func removeZeroFromEnd(value: Double) -> String{
+       let f = NumberFormatter()
+        let number = NSNumber(value:value)
+        f.minimumFractionDigits = 0
+        f.maximumFractionDigits = 16
+        return f.string(from: number) ?? ""
+        
+    }
     func process(digit: Int){
         if operation > 0 {
             result = 0
@@ -51,7 +60,7 @@ struct ContentView: View {
             Text("\(String(result).count)").foregroundColor(.red)
             Spacer()
             HStack{
-                Text(String(result))
+                Text(String(removeZeroFromEnd(value: result)))
                     .padding()
                     .lineLimit(1)
                     .frame(maxWidth:.infinity)
