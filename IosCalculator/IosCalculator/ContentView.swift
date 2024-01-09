@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var previous = 0
-    @State var result = 0
-    @State var operation = 0
-    @State var previousOperation = 0
+    @State var previous = 0.0
+    @State var result = 0.0
+    @State var operation = 0.0
+    @State var previousOperation = 0.0
     func process(digit: Int){
         if operation > 0 {
             result = 0
             previousOperation = operation
             operation = -1
         }
-        result = (result * 10) + digit
+        result = (result * 10) + Double(digit)
     }
     func calculate(){
         if previousOperation == 1 {
